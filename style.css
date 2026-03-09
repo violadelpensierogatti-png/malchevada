@@ -1,0 +1,73 @@
+/* Reset di base per togliere i margini predefiniti */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000; /* Fondo nero durante il caricamento */
+}
+
+/* --- Slideshow Cross-fade Professionale --- */
+.slideshow-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Sotto il testo */
+}
+
+.mySlides {
+    position: absolute; /* Sovrapposte */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Stato iniziale: invisibile */
+    opacity: 0;
+    
+    /* Questa riga gestisce la transizione dolce (cross-fade) */
+    transition: opacity 2.5s ease-in-out; /* 2.5 secondi di dissolvenza */
+}
+
+/* Classe aggiunta da JS per mostrare l'immagine */
+.mySlides.show {
+    opacity: 1;
+}
+
+/* --- Contenuto Perfettamente Centrale --- */
+.central-content {
+    position: relative;
+    z-index: 10; /* Sopra lo slideshow */
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center;     /* Centra verticalmente */
+    height: 100%;
+    width: 100%;
+    /* Velo scuro per leggibilità */
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.content-wrapper {
+    text-align: center; /* Centra il testo internamente */
+    max-width: 90%;     /* Evita che tocchi i bordi su mobile */
+}
+
+.logo {
+    max-width: 500px;   /* Dimensione del logo */
+    width: 100%;        /* Adattabile */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.coming-soon {
+    font-size: 1rem;    /* Scritta piccola */
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 6px; /* Spaziatura elegante */
+    color: rgba(255, 255, 255, 0.8); /* Bianco leggermente trasparente */
+    margin: 0;
+}
