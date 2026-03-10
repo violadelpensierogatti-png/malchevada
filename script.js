@@ -2,7 +2,7 @@
 const slides = document.querySelectorAll('.mySlides');
 const slideCount = slides.length;
 let currentSlide = 0;
-const slideDuration = 6000; // Tempo totale per ogni foto (6 secondi inclusa transizione)
+const slideDuration = 4000; // Tempo totale per ogni foto (6 secondi inclusa transizione)
 
 function nextSlide() {
     // 1. Togli la classe 'show' all'immagine attuale (inizia a sparire)
